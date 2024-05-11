@@ -18,11 +18,15 @@ Add GitHub repository to pom file.
 Also, to get access to GitHub maven repository u need to provide authentication token.
 Provide username/password in your maven settings.xml like this
 ```xml
-<servers>
-    <server>
-        <id>github</id>
-        <username>${username}</username>
-        <password>${password}</password>
-    </server>
-</servers>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>github</id>
+            <username>${username}</username>
+            <password>${password}</password>
+        </server>
+    </servers>
+</settings>
 ```
